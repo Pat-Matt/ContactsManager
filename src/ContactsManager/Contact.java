@@ -1,3 +1,4 @@
+
 package ContactsManager;
 
 import java.util.ArrayList;
@@ -27,8 +28,8 @@ public class Contact {
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
-
-    static List<Contact> getContacts() {
+}
+/*    static List<Contact> getContacts() {
 
         Contact Matt = new Contact("Matt", "123456789");
         Contact Pat = new Contact("Pat", "456");
@@ -40,5 +41,7 @@ public class Contact {
         contacts.add(Ry);
 
         return contacts;
-    }
-}
+    }*/
+
+
+

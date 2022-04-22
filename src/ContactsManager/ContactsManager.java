@@ -3,28 +3,29 @@ package ContactsManager;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ContactsManager.Contact.getContacts;
-
+/*import static ContactsManager.Contact.getContacts;*/
 
 public class ContactsManager {
-    public static void main(String[] args) {
-        Contact mike = new Contact("Mike", "1234567");
-        System.out.print(mike.getName());
-        System.out.print(" || ");
-        System.out.print(mike.getPhoneNum() + "\n");
-
-        getContacts(contacts);
-        //create  method that creates .txt contacts
-
+    //create  method that creates .txt contacts
 
 //Load all of the contacts by calling a method that returns a List of Contact objects.
 
-        //Show all your contacts
-        //Add a new contact
-       // Search a contact by her name
-       // Delete an existing contact
+    //Show all your contacts
+    //Add a new contact
+    // Search a contact by her name
+    // Delete an existing contact
 
+//    }
+
+    Contact [] myContacts;
+    int contactsCount;
+
+    //Constructor:
+    public ContactsManager() {
+        this.contactsCount = 0;
+        this.myContacts = new Contact[20];
     }
+}
 
 //    public static String printContactInfo() {
 //        for (int i = 0, i < contact.length, i++) {
@@ -37,6 +38,3 @@ public class ContactsManager {
 //        }
 //    }
 
-
-
-}
