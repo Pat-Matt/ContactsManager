@@ -6,24 +6,17 @@ import java.util.List;
 /*import static ContactsManager.Contact.getContacts;*/
 
 public class ContactsManager {
-    //create  method that creates .txt contacts
 
-//Load all of the contacts by calling a method that returns a List of Contact objects.
-
-    //Show all your contacts
-    //Add a new contact
-    // Search a contact by her name
-    // Delete an existing contact
-
-//    }
-
-    Contact [] myContacts;
+    static List<Contact> myContacts = new ArrayList<>();
     int contactsCount;
 
-    //Constructor:
-    public ContactsManager() {
-        this.contactsCount = 0;
-        this.myContacts = new Contact[20];
+    public static void setContacts() {
+        Contact james = new Contact("James", "123-456-7890");
+        myContacts.add(james);
+    }
+
+    public static List<Contact> getContacts() {
+        return myContacts;
     }
 }
 
