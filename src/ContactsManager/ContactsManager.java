@@ -51,15 +51,15 @@ public class ContactsManager {
     static List<Contact> contactsList = new ArrayList<>();
     //static String contacts = new ArrayList<>();
 
-    public static void setContacts(String name, String phone) {
-        Contact[] newContact = ;
-        for (int i = 0; i < newContact.length; i++) {
-            newContact = new Contact[0];
-            contactsList.add(newContact[i]);
-        }
+    public static void setContacts() {
+//        Contact[] newContact = ;
+//        for (int i = 0; i < newContact.length; i++) {
+//            newContact = new Contact[0];
+//            contactsList.add(newContact[i]);
+//        }
 
-/*        Contact james = new Contact("James", "123-456-7890");
-        contactsList.add(james);*/
+        Contact james = new Contact("James", "123-456-7890");
+        contactsList.add(james);
     }
 
     public static List<Contact> getContacts() {
