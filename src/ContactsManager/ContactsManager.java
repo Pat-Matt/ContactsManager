@@ -13,7 +13,7 @@ import static java.nio.file.Paths.get;
 /*import static ContactsManager.Contact.getContacts;*/
 
 public class ContactsManager {
-//Files
+    //Files
     private String filename;
     private String directory;
     private List<String> fileData;
@@ -35,12 +35,15 @@ public class ContactsManager {
     private String getFilename() {
         return filename;
     }
+
     private String getDirectory() {
         return directory;
     }
+
     private List<String> getFileData() {
         return fileData;
     }
+
     private Path getFilePath() {
         return filePath;
     }
@@ -48,9 +51,15 @@ public class ContactsManager {
     static List<Contact> contactsList = new ArrayList<>();
     //static String contacts = new ArrayList<>();
 
-    public static void setContacts() {
-        Contact james = new Contact("James", "123-456-7890");
-        contactsList.add(james);
+    public static void setContacts(String name, String phone) {
+        Contact[] newContact = ;
+        for (int i = 0; i < newContact.length; i++) {
+            newContact = new Contact[0];
+            contactsList.add(newContact[i]);
+        }
+
+/*        Contact james = new Contact("James", "123-456-7890");
+        contactsList.add(james);*/
     }
 
     public static List<Contact> getContacts() {
