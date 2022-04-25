@@ -23,7 +23,6 @@ public class ContactOutput {
                 printContactList();
             } else if (userChoice == 2) {
                 AddContact.addContact();
-                //System.out.println("Sorry we are currently working on that feature");
             } else if (userChoice == 3) {
                 System.out.println("You do not have clearance to view the contact list");
             } else if (userChoice == 4) {
