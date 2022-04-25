@@ -7,13 +7,14 @@ public class AddContact {
         Scanner sc = new Scanner(System.in);
         boolean userAddingContact = true;
         do {
-            sc.nextLine();
             boolean userInput = true;
+            String userInputFirstName;
+            String userInputLastName;
             do {
                 System.out.print("Enter a First Name: ");
-                String userInputFirstName = sc.nextLine();
+                userInputFirstName = sc.nextLine();
                 System.out.println("Enter a Last Name: ");
-                String userInputLastName = sc.nextLine();
+                userInputLastName = sc.nextLine();
                 for (Contact contact : ContactsManager.getContacts()) {
                     if (!(userInputFirstName + userInputLastName).equals(contact.getName())) {
                         System.out.printf("You entered %s %s%n", userInputFirstName, userInputLastName);
@@ -24,9 +25,10 @@ public class AddContact {
                     }
                 }
             } while (!userInput);
+            String userInputPhoneNumber;
             do {
                 System.out.println("Enter a phone number: ");
-                String userInputPhoneNumber = sc.nextLine();
+                userInputPhoneNumber = sc.nextLine();
                 for (Contact contact : ContactsManager.getContacts()) {
                     if (!(userInputPhoneNumber).equals(contact.getPhoneNum())) {
                         System.out.printf("You entered %s%n", userInputPhoneNumber);
@@ -37,7 +39,7 @@ public class AddContact {
                     }
                 }
             } while (!userInput);
-            ContactsManager.setContacts(userInputFirstName, userInputPhoneNumber);
+            ContactsManager.setContacts(); // userInputFirstName, userInputPhoneNumber
             System.out.println("Contact successfully added, Do you want to add another contact (y/n): ");
             String userWantsToContinue = sc.next();
 
