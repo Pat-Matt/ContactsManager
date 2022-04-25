@@ -22,8 +22,8 @@ public class ContactOutput {
             if (userChoice == 1) {
                 printContactList();
             } else if (userChoice == 2) {
-                addContact.addContact();
-                // System.out.println("Sorry we are currently working on that feature");
+                AddContact.addContact();
+                //System.out.println("Sorry we are currently working on that feature");
             } else if (userChoice == 3) {
                 System.out.println("You do not have clearance to view the contact list");
             } else if (userChoice == 4) {
@@ -45,7 +45,7 @@ public class ContactOutput {
         ContactsManager.setContacts();
         List<Contact> myContacts = ContactsManager.getContacts();
         for(Contact contact : myContacts){
-            System.out.println(contact);
+            System.out.println(contact.getName() + "  ||  " + contact.getPhoneNum());
         }
     }
 }

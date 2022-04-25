@@ -1,4 +1,3 @@
-
 package ContactsManager;
 
 import java.util.ArrayList;

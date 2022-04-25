@@ -7,6 +7,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.nio.file.Path.*;
+import static java.nio.file.Paths.get;
+
 /*import static ContactsManager.Contact.getContacts;*/
 
 public class ContactsManager {
@@ -23,9 +26,9 @@ public class ContactsManager {
         this.directory = directory;
 
         //directory & file paths
-        this.directoryPath = Paths.get(directory);
-        this.filePath = Path.get(directory, filename);
-        this.fileData = getFile();
+        this.directoryPath = get(directory);
+        this.filePath = get(directory, filename);
+        this.fileData = getFileData();
     }
 
     //Gets
@@ -42,16 +45,16 @@ public class ContactsManager {
         return filePath;
     }
 
-    static List<Contact> myContacts = new ArrayList<>();
-    int contactsCount;
+    static List<Contact> contactsList = new ArrayList<>();
+    //static String contacts = new ArrayList<>();
 
     public static void setContacts() {
         Contact james = new Contact("James", "123-456-7890");
-        myContacts.add(james);
+        contactsList.add(james);
     }
 
     public static List<Contact> getContacts() {
-        return myContacts;
+        return contactsList;
     }
 }
 
