@@ -20,12 +20,13 @@ public class AddContact {
                 for (Contact contact : ContactsManager.getContacts()) {
                     if (!(userInputFirstName + userInputLastName).equals(contact.getName())) {
                         userInput = true;
-                        System.out.printf("You entered %s %s%n", userInputFirstName, userInputLastName);
                     } else {
                         userInput = false;
-                        System.out.println("That name already exists. Please input a new name");
+                        System.out.println("That name already exists. Please input a new name"); // DO you want to edit?
+                        //Can show the name and number of the current contact
                     }
                 }
+                System.out.printf("You entered %s %s%n", userInputFirstName, userInputLastName);
             } while (!userInput);
             String userInputPhoneNumber;
             do {
@@ -34,13 +35,14 @@ public class AddContact {
                 for (Contact contact : ContactsManager.getContacts()) {
                     if (!(userInputPhoneNumber).equals(contact.getPhoneNum())) {
                         userInput = true;
-                        System.out.printf("You entered %s%n", userInputPhoneNumber);
                     } else {
                         userInput = false;
                         System.out.println("That phone number already exists. Please try again");
                     }
                 }
+                System.out.printf("You entered %s%n", userInputPhoneNumber);
             } while (!userInput);
+            // Boolean method
             ContactsManager.setContacts(userInputFirstName, userInputPhoneNumber); // userInputFirstName, userInputPhoneNumber
             System.out.println("Contact successfully added, Do you want to add another contact (y/n): ");
             String userWantsToContinue = sc.nextLine();
