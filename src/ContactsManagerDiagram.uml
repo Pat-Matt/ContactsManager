@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="50.5" y="-34.0">com</node>
+    <node x="3879.5" y="-34.0">images</node>
+    <node x="3671.5" y="-34.0">netscape</node>
+    <node x="3494.5" y="-34.0">org</node>
+    <node x="3218.0" y="-34.0">ContactsManager</node>
+    <node x="2898.5" y="-34.0">toolbarButtonGraphics</node>
+    <node x="2733.5" y="-34.0">sun</node>
+    <node x="2555.5" y="-34.0">jdk</node>
+    <node x="2328.0" y="-34.0">META-INF</node>
+    <node x="2146.0" y="-34.0">apple</node>
+    <node x="1563.772727272727" y="-307.47727272727275">groovyjarjarasm</node>
+    <node x="1711.5" y="-34.0">java</node>
+    <node x="1520.5" y="-34.0">groovy</node>
+    <node x="1327.5" y="-34.0">javax</node>
+    <node x="1035.5" y="-34.0">groovyjarjarpicocli</node>
+    <node x="759.1136363636364" y="-125.15909090909076">groovyjarjarcommonscli</node>
+    <node x="504.5" y="-34.0">javafx</node>
+    <node x="223.0" y="-34.0">groovyjarjarantlr</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Compact" zoom="0.23036649214659685" showDependencies="false" x="2046.0" y="-20.0" />
+  <SelectedNodes>
+    <node>groovyjarjarasm</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
