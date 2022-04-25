@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static java.nio.file.Path.*;
 import static java.nio.file.Paths.get;
@@ -68,6 +69,8 @@ public class ContactsManager {
         return contactsList;
     }
 }
+
+
 
 //    public static String printContactInfo() {
 //        for (int i = 0, i < contact.length, i++) {
