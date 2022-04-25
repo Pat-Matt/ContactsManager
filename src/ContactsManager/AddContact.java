@@ -37,7 +37,8 @@ public class AddContact {
                     }
                 }
             } while (!userInput);
-            System.out.println("Do you want to add another contact (y/n): ");
+            ContactsManager.setContacts(userInputFirstName, userInputPhoneNumber);
+            System.out.println("Contact successfully added, Do you want to add another contact (y/n): ");
             String userWantsToContinue = sc.next();
 
             if (!userWantsToContinue.equalsIgnoreCase("y")) {
