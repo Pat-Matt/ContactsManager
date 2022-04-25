@@ -25,7 +25,6 @@ public class ContactsManager {
         //directory & file paths
         this.directoryPath = Paths.get(directory);
         this.filePath = Path.get(directory, filename);
-
         this.fileData = getFile();
     }
 
