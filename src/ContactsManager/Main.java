@@ -2,10 +2,13 @@ package ContactsManager;
 
 import java.nio.file.Path;
 import java.util.*;
+import java.util.Scanner;
 
 public class Main {
+    public static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        //ContactOutput.mainMenu();
+        ContactOutput.mainMenu();
 
         Path newPath = FileHelper.tryMakeFileDirectory();
 
@@ -23,6 +26,7 @@ public class Main {
             //System.out.println(contactee.getKey());
             System.out.println(contactee.getValue().getName() + " || " + contactee.getValue().getPhoneNum());
         }
+
 /*        Contact mike = new Contact("Mike", "1234567");
         System.out.print(mike.getName());
         System.out.print(" || ");

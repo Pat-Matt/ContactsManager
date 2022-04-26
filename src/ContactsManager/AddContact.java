@@ -1,10 +1,9 @@
 package ContactsManager;
 
-import java.util.Scanner;
+import static ContactsManager.Main.sc;
 
 public class AddContact {
     public static void addContact() {
-        Scanner sc = new Scanner(System.in);
         boolean userAddingContact = true;
         do {
             boolean userInput = true;
@@ -43,7 +42,7 @@ public class AddContact {
                 System.out.printf("You entered %s%n", userInputPhoneNumber);
             } while (!userInput);
             // Boolean method
-            ContactsManager.setContacts(userInputFirstName, userInputPhoneNumber); // userInputFirstName, userInputPhoneNumber
+            ContactsManager.setContacts(userInputFirstName, userInputPhoneNumber);
             System.out.println("Contact successfully added, Do you want to add another contact (y/n): ");
             String userWantsToContinue = sc.nextLine();
 
@@ -54,6 +53,9 @@ public class AddContact {
         } while (userAddingContact);
     } //TODO: If else loop for the whole method to confirm that the contact was successfully added
 
+//    public static boolean continueAdding() {
+//
+//    }
 
 //    public static void setContacts() {
 //        Contact james = new Contact("James", "123-456-7890");
