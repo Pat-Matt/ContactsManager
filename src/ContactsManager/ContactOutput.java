@@ -5,8 +5,7 @@ import static ContactsManager.Main.sc;
 
 public class ContactOutput {
 
-    public static void mainMenu() {
-
+    public static void mainMenu(List <Contact> contacts) {
         int userChoice = -1;
         while (userChoice != 5) {
             System.out.println("1. View Contacts");
@@ -18,19 +17,20 @@ public class ContactOutput {
             System.out.println("Enter an option (1, 2, 3, 4 or 5): ");
             userChoice = Integer.parseInt(sc.nextLine());
 
-            //Switch Case
+            //TODO: Switch Case
             if (userChoice == 1) {
-                printContactList();
+                printContactList(contacts);
                 System.out.println();
             } else if (userChoice == 2) {
-                AddContact.addContact();
+                AddContact.addContact(contacts);
                 System.out.println();
             } else if (userChoice == 3) {
-                SearchContact.searchContacts();
+                SearchContact.searchContacts(contacts);
                 //System.out.println("You do not have clearance to view the contact list");
                 System.out.println();
             } else if (userChoice == 4) {
-                System.out.println("You are not authorized!!");
+                DeleteContact.deleteLine(contacts);
+                //System.out.println("You are not authorized!!");
                 System.out.println();
             } else if (userChoice == 5) {
                 System.out.println("GoodBye");
@@ -40,21 +40,18 @@ public class ContactOutput {
                 System.out.println();
             }
         } //Add a try catch for an input that is not an integer
-
-
     }
 
-    public static void printContactList() {
+    public static void printContactList(List <Contact> myContacts) {
         System.out.println("Contact Name  ||  Phone Number");
         System.out.println("------------------------------");
 
-        List<Contact> myContacts = ContactsManager.getContacts();
         for(Contact contact : myContacts){
             System.out.println(contact.getName() + "  ||  " + contact.getPhoneNum());
         }
     }
 
-    public static void editOrDelete() {
+    public static void editOrDelete(List <Contact> contacts) {
         System.out.println("What would you like to do with this contact?");
 
         int userChoice = -1;
@@ -70,11 +67,14 @@ public class ContactOutput {
                 System.out.println("You do not have clearance to edit the contact list");
                 System.out.println();
             } else if (userChoice == 2) {
-                System.out.println("You are not authorized!!");
+                DeleteContact.deleteLine(contacts);
                 System.out.println();
             } else if (userChoice == 3) {
                 System.out.println("See you on the flip side");
                 System.out.println();
+                mainMenu(contacts);
+            } else {
+                editOrDelete(contacts);
             }
         }
     }
