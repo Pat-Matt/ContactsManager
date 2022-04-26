@@ -1,6 +1,8 @@
 package ContactsManager;
 
-public class Contact{
+import java.util.HashMap;
+
+public class Contact {
     private String name;
     private String phoneNum;
 
@@ -33,6 +35,28 @@ public class Contact{
                 '}';
     }
 }
+
+//    private HashMap h = null;
+////instantiate hashmap in the constructor
+//    public ...
+//    //add value to hashmap
+//    public void add(Object value)
+//    {
+//        h.put(value);//eventually cast value or declare it as you did it in the hashmap
+//    }
+//
+//    //get hashmap
+//    public HashMap getMap()
+//    {
+//        return h;
+//    }
+//
+//    //set hashmap
+//    public void setMap(HashMap hm)
+//    {
+//        h=hm;
+//    }...
+//}
 /*    static List<Contact> getContacts() {
 
         Contact Matt = new Contact("Matt", "123456789");

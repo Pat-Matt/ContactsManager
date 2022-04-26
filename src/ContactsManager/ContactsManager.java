@@ -1,7 +1,6 @@
 package ContactsManager;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ContactsManager {
 
@@ -14,6 +13,17 @@ public class ContactsManager {
 
     public static List<Contact> getContacts() {
         return contactsList;
+    }
+
+    public static void theHashMap() {
+        HashMap<String, Contact> contactMap = new HashMap<>();
+        for (Contact contact : Objects.requireNonNull(FileHelper.tryReadFile(FileHelper.tryMakeFileDirectory()))) {
+            contactMap.put(contact.getName(), contact);
+        }
+        for (Map.Entry<String, Contact> contactee: contactMap.entrySet()){
+            System.out.println(contactee.getKey());
+            System.out.println(contactee.getValue().getName() + " || " + contactee.getValue().getPhoneNum());
+        }
     }
 }
 
