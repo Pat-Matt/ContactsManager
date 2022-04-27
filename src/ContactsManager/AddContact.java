@@ -13,7 +13,7 @@ public class AddContact {
             do {
                 System.out.print("Enter a First Name: ");
                 userInputFirstName = sc.nextLine();
-                System.out.print("Enter a Last Name: ");
+                //System.out.print("Enter a Last Name: ");
                 //userInputLastName = sc.nextLine();
                 for (Contact contact : contacts) {
                     if (!(userInputFirstName /*+ userInputLastName*/).equals(contact.getName())) {
@@ -21,7 +21,6 @@ public class AddContact {
                     } else {
                         userInput = false;
                         System.out.println("That name already exists. Please input a new name"); // DO you want to edit?
-                        //Can show the name and number of the current contact
                     }
                 }
                 System.out.printf("You entered %s%n", userInputFirstName); //, userInputLastName);
@@ -37,6 +36,12 @@ public class AddContact {
                         userInput = false;
                         System.out.println("That phone number already exists. Please try again");
                     }
+                }
+                if (userInputPhoneNumber.equals("^\\d{10}$")) {
+                    userInputPhoneNumber = userInputPhoneNumber.replaceFirst("...", "($0) ");
+                    userInputPhoneNumber = userInputPhoneNumber.replaceFirst(".........", "$0-");
+                } else {
+                    userInputPhoneNumber = userInputPhoneNumber.replaceFirst("...", "$0-");
                 }
                 System.out.printf("You entered %s%n", userInputPhoneNumber);
             } while (!userInput);

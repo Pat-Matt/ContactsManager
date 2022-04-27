@@ -33,7 +33,8 @@ public class ContactOutput {
                 //System.out.println("You are not authorized!!");
                 System.out.println();
             } else if (userChoice == 5) {
-                System.out.println("GoodBye");
+                System.out.println("‘You’ve made this day a special day, by just your being you. " +
+                        "There’s no person in the whole world like you, and I like you just the way you are.");
                 System.out.println();
             } else {
                 System.out.println("Please enter a valid selection");

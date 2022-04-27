@@ -10,7 +10,8 @@ public class DeleteContact {
         System.out.print("Enter a First Name: ");
         String userInputFirstName = sc.nextLine();
         List <Contact> contactToRemove = new ArrayList<>();
-        for (Contact contact : contacts) {
+        for (Contact contact : contacts) { //Needs to be a for I LOOP
+            //for(int contact = 0; contact.length)
             if ((userInputFirstName /*+ userInputLastName*/).equals(contact.getName())) {
                 System.out.println(contact.getName() + "  ||  " + contact.getPhoneNum());
                 contactToRemove.add(contact);
