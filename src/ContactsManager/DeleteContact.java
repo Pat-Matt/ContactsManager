@@ -1,34 +1,24 @@
 package ContactsManager;
 
-//import static ContactsManager.ContactsManager.getFileData;();
+import java.util.*;
+import static ContactsManager.Main.sc;
 
-//public class deleteContact {
-//
-//    // Write
-//    public boolean writeFile() {
-//        try {
-//            Files.write(filePath, fileData);
-//        } catch (IOException e) {
-//            System.out.println("Error writing to file: " + filename);
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    public List<String> deleteLine(String delString) {
-//        for (String line : getFileData()) {
-//            if (line.equals(delString)) {
-//                System.out.println("Found contact to delete...");
-//                fileData.remove(delString);
-//                writeFile();
-//                System.out.println("Deleted Contact: " +
-//                        delString, substring(0, delString.indexOf("|")));
-//                System.out.println("\n<------------------------------->\n");
-//                return fileData;
-//            }
-//        }
-//        System.out.println("Error, unable to Delete.");
-//        System.out.println("\n<-------------------------------\n");
-//        return fileData;
-//    }
-//}
+public class DeleteContact {
+
+    public static void deleteLine(List<Contact> contacts) {
+        //find way to put this in one method since we are doing it multiple times.  take this loop.
+        System.out.print("Enter a First Name: ");
+        String userInputFirstName = sc.nextLine();
+        List <Contact> contactToRemove = new ArrayList<>();
+        for (Contact contact : contacts) { //Needs to be a for I LOOP
+            //for(int contact = 0; contact.length)
+            if ((userInputFirstName /*+ userInputLastName*/).equals(contact.getName())) {
+                System.out.println(contact.getName() + "  ||  " + contact.getPhoneNum());
+                contactToRemove.add(contact);
+            } else {
+                System.out.println("That name does not exist. Please input a new name");
+            }
+        }
+        contacts.removeAll(contactToRemove);
+    }
+}

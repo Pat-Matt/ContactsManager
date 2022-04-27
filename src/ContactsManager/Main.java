@@ -1,15 +1,20 @@
 package ContactsManager;
 
-import java.util.List;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.Scanner;
 
 public class Main {
+    public static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        ContactOutput.mainMenu();
+        Path newPath = FileHelper.tryMakeFileDirectory();
 
+        List<Contact> contactsToWrite = FileHelper.tryReadFile(newPath);
+        assert contactsToWrite != null;
+        contactsToWrite = new ArrayList<>(contactsToWrite);
+        ContactOutput.mainMenu(contactsToWrite);
 
-/*        Contact mike = new Contact("Mike", "1234567");
-        System.out.print(mike.getName());
-        System.out.print(" || ");
-        System.out.print(mike.getPhoneNum() + "\n");*/
+        FileHelper.tryWriteFile(newPath, contactsToWrite);
     }
 }

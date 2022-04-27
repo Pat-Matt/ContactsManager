@@ -1,9 +1,6 @@
 package ContactsManager;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Contact{
+public class Contact {
     private String name;
     private String phoneNum;
 
@@ -36,19 +33,6 @@ public class Contact{
                 '}';
     }
 }
-/*    static List<Contact> getContacts() {
-
-        Contact Matt = new Contact("Matt", "123456789");
-        Contact Pat = new Contact("Pat", "456");
-        Contact Ry = new Contact("Ry", "789");
-
-        List<Contact> contacts = new ArrayList<>();
-        contacts.add(Matt);
-        contacts.add(Pat);
-        contacts.add(Ry);
-
-        return contacts;
-    }*/
 
 
 

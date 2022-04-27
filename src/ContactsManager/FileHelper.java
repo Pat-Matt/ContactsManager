@@ -7,16 +7,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.ArrayList;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import static java.util.stream.Collectors.toList;
+
 
 public class FileHelper {
 
     public static Path tryMakeFileDirectory() {
-        String Directory = "data";
-        String filename = "info.json";
+        String directory = "data";
+        String filename = "contacts.json";
 
         Path dataDirectory = Paths.get(directory);
         Path dataFile = Paths.get(directory, filename);
@@ -55,4 +53,3 @@ public class FileHelper {
         return null;
     }
 }
-
